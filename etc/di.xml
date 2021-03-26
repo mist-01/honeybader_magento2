@@ -1,0 +1,5 @@
+<config>
+    <type name="\Magento\Framework\App\Http">
+      <plugin name="HoneyBadger_Http" type="\uft\honeybader_magento2\Plugin\Http" sortOrder="1" />
+    </type>
+</config>
