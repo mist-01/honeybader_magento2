@@ -1,5 +1,5 @@
 # HoneyBadger Plugin for Magento 2
-
+This module has been tested with Magento 2.3.
 ## Install Instructions
 1. Run `composer require uft/honeybader_magento2`
 2. Add the following to app/etc/env.php:
