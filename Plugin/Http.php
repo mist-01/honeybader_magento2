@@ -3,16 +3,18 @@
 namespace uft\honeybader_magento2\Plugin;
 
 use Honeybadger\Honeybadger;
+use uft\honeybader_magento2\Reporter;
 
 class Http
 {
+	protected $reporter;
+	public function __construct(Reporter $reporter)
+	{
+		$this->reporter = $reporter;
+	}
 	public function aroundCatchException($subject, $callable, $bootstrap, $exception)
 	{
 		$callable($bootstrap, $exception);
-		$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
-		$deploymentConfig = $objectManager->get(\Magento\Framework\App\DeploymentConfig::class); 
-		$config = $deploymentConfig->get('honeybadger');
-		$hb = new Honeybadger($config);
-		$hb->notify($exception);
+		$this->reporter->reportException($exception);
 	}
 }
