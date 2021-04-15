@@ -3,6 +3,7 @@
 namespace uft\honeybader_magento2;
 
 use Honeybadger\Honeybadger;
+use Throwable;
 
 class Reporter
 {
@@ -17,7 +18,7 @@ class Reporter
 		$this->honeyBadger = new Honeybadger($config);
 	}
 
-    public function reportException($exception)
+    public function reportException(Throwable $exception)
 	{
 		$this->honeyBadger->notify($exception);
 	}

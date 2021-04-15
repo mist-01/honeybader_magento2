@@ -2,4 +2,7 @@
     <type name="\Magento\Framework\App\Http">
       <plugin name="HoneyBadger_Http" type="\uft\honeybader_magento2\Plugin\Http" sortOrder="1" />
     </type>
+    <type name="Magento\Framework\AppInterface">
+      <plugin disabled="false" name="HoneBadger_Launch" type="\uft\honeybader_magento2\Plugin\Launch" sortOrder="0"/>
+    </type>
 </config>
