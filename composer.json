@@ -7,7 +7,7 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "honeybadger-io/honeybadger-php": "^1.9"
+    "honeybadger-io/honeybadger-php": "^2.13"
   },
   "autoload": {
     "files": [ "registration.php" ],
